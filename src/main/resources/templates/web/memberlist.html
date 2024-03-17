@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원목록</title>
+</head>
+<body>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>번호</th>
+        <th>이름</th>
+        <th>아이디</th>
+        <th>주소</th>
+        <th>생일</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="mems : ${members}">
+        <td th:text="${mems.mno}"></td>
+        <td>
+            <a th:href="@{/web/memberview(mno=${mems.mno})}" th:text="${mems.name}"></a>
+        </td>
+        <td th:text="${mems.id}"></td>
+        <td th:text="${mems.address}"></td>
+        <td th:text="${mems.birthdate}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

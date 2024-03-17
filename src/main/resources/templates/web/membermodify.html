@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원정보수정</title>
+</head>
+<body>
+
+<h3>수정할 정보 입력</h3>
+<form method="post" action="membermodify">
+
+
+비밀번호 : <input type="password" name="pw">
+이름 : <input type="text" name="name" th:value="${member.name}">
+주소 : <input type="text" name="address" th:value="${member.address}">
+생일 : <input type="text" name="birthdate" th:value="${member.birthdate}">
+    <input type="submit" value="수정하기">
+</form>
+
+</body>
+</html>

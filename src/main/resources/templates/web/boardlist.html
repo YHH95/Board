@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>게시판</title>
+</head>
+<body>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>번호</th>
+        <th>제목</th>
+        <th>내용</th>
+        <th>작성자</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="boards : ${boards}">
+        <td th:text="${boards.bno}"></td>
+        <td>
+            <a th:href="@{/web/boardview(bno=${boards.bno})}" th:text="${boards.title}"></a>
+        </td>
+        <td th:text="${boards.content}"></td>
+        <td th:text="${boards.writer}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

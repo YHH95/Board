@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원정보</title>
+</head>
+<body>
+
+<h3>회원정보를 봅시다</h3>
+등록번호 : [[${member.mno}]]<br>
+이름 : [[${member.name}]]<br>
+아이디 : [[${member.id}]]<br>
+패스워드 : [[${member.pw}]]<br>
+주소 : [[${member.address}]]<br>
+생일 : [[${member.birthdate}]]<br>
+<a th:href="@{/web/membermodify(mno=${member.mno})}">
+    <button type="button">수정하기</button>
+</a>
+<a th:href="@{/web/memberdelete(mno=${member.mno})}">
+    <button type="button">삭제하기</button>
+</a>
+
+</body>
+</html>
